@@ -19,3 +19,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+ceskolipskaesports.config.ts
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
