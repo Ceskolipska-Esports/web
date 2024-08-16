@@ -3,9 +3,10 @@
 </svelte:head>
 
 <script lang="ts">
+	import '@fontsource-variable/open-sans';
+
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
-	import '@fontsource-variable/open-sans';
 </script>
 
 <Navbar />
@@ -17,6 +18,7 @@
 <style lang="scss">
 	:global(*) {
 		--text-color: rgb(240, 240, 240);
+		--navbar-text-color: rgb(190, 190, 190);
 		--accent-color: #ee0000;
 		--global-padding: 2rem;
 	}

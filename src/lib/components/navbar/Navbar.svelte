@@ -1,5 +1,6 @@
 <script lang="ts">
 	import globals from '$lib/globals';
+	import LoginButton from './LoginButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';
 	import TwitchLiveIndicator from './TwitchLiveIndicator.svelte';
 </script>
@@ -7,12 +8,10 @@
 <nav>
 	<NavbarLink href="/">Českolipská Esports</NavbarLink>
 	<div>
-		<div id="twitch-section">
-			<TwitchLiveIndicator />
-			<NavbarLink href={`https://twitch.tv/ceskolipskaesports`}>Twitch</NavbarLink>
-		</div>
+		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"><TwitchLiveIndicator /> Twitch</NavbarLink>
 		<NavbarLink href={globals.discordInvite} target="_blank">Discord</NavbarLink>
 		<NavbarLink href="/turnaje">Turnaje</NavbarLink>
+		<LoginButton />
 	</div>
 </nav>
 
@@ -30,10 +29,6 @@
 			gap: 3rem;
 			align-items: center;
 			height: 2rem;
-		}
-
-		#twitch-section {
-			gap: 1rem;
 		}
 	}
 </style>
