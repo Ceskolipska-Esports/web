@@ -15,3 +15,9 @@ pnpx dotenv-vault login && pnpx dotenv-vault@latest pull # stáhněte si tajné 
 pnpx supabase@latest start # spusťte lokální instanci Supabase pro vývoj
 pnpm dev # spusťte vývojový server
 ```
+
+## Spuštění
+
+Git repo je propojeno s Cloudflare Pages, které projekt vždy sestaví z nejnovějšího commitu
+na větvi master. Dotenv-vault pak stáhne proměnné pro produkci a projekt se spustí.
+
