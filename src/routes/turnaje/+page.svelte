@@ -1,7 +1,10 @@
 <script lang="ts">
 	import TournamentView from '$lib/components/TournamentView.svelte';
+	import type { Tournament } from '$lib/tournament';
 
 	export let data;
+	const tournaments: Tournament[] | undefined = data.data as Tournament[] | undefined;
+	
 	let id = 1;
 
 	const getTournamentViewID = (): number => {
@@ -11,11 +14,13 @@
 
 {#if data.error}
 	<h1>Turnaje nelze načíst</h1>
+{:else if !tournaments}
+	<h1>Žádné nadcházející turnaje</h1>
 {:else}
-	<h1 id="main-title">Turnaje</h1>
-	{#if data.upcoming && data.upcoming?.length !== 0}
+	<h1 id="main-title">Nadcházející turnaje</h1>
+	{#if tournaments && tournaments.length !== 0}
 		<div id="tournament-list">
-			{#each data.upcoming as tournament}
+			{#each tournaments as tournament}
 				<TournamentView data={tournament} id={getTournamentViewID()} />
 			{/each}
 		</div>
@@ -26,10 +31,8 @@
 
 <style lang="scss">
 	#main-title {
-		text-align: center;
 		font-size: 3rem;
 	}
-
 	#tournament-list {
 		display: flex;
 		flex-direction: column;

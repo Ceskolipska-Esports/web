@@ -5,20 +5,25 @@
 	export let id: number;
 
 	const getFormattedTime = (date?: Date) => {
-		if (!date) return "?";
+		if (!date) return '?';
 
 		const d = new Date(date);
 		return `${d.getHours()}:${d.getMinutes()}`;
-	}
+	};
 
-	let formattedDate: string = data.start ? new Date(data.start).toLocaleDateString('cs-CZ') : "?";
+	let formattedDate: string = data.start ? new Date(data.start).toLocaleDateString('cs-CZ') : '?';
 	let formattedTime: string = getFormattedTime(data.start);
 
 	let dateHovered: boolean = false;
-
 </script>
 
-<div id={`tournament-view-${id}`} class="tournament-view" on:mouseenter={() => dateHovered = true} on:mouseleave={() => dateHovered = false} role="region">
+<div
+	id={`tournament-view-${id}`}
+	class="tournament-view"
+	on:mouseenter={() => (dateHovered = true)}
+	on:mouseleave={() => (dateHovered = false)}
+	role="region"
+>
 	<div class="tournament-view-left">
 		<div class="date-text">
 			{dateHovered ? formattedTime : formattedDate}

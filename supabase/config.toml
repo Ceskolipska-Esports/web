@@ -238,6 +238,6 @@ s3_secret_key = "env(S3_SECRET_KEY)"
 
 [auth.external.discord]
 enabled = true
-client_id = "1272804130662125588"
-secret = "okTQDPQAva6yB54JlRvszWTCDEr69RlE"
-redirect_uri = "https://localhost:5173/api/login"
+client_id = "env(DISCORD_CLIENT_ID)"
+secret = "env(DISCORD_CLIENT_SECRET)"
+redirect_uri = "https://localhost:54321/auth/v1/callback"
