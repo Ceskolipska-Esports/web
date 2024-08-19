@@ -1,14 +1,8 @@
-<script>
-
-	import { supabase } from "$lib/supabaseClient";
-
-</script>
 <h1 id="main-title" class="mt-32 mb-16 text-center">
 	Chceš se stát <b><u id="champ">šampionem</u></b>?
 </h1>
 <p>Českolipská Esports je šancí, díky které se šampionem může stát kdokoliv.</p>
 <div class="mx-auto"></div>
-<button on:click={() => {supabase.auth.signInWithOAuth({ provider: 'discord' })}}>login</button>
 
 <style lang="scss">
 	#main-title {

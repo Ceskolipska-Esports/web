@@ -1,6 +1,6 @@
 <script lang="ts">
 	import globals from '$lib/globals';
-	import LoginButton from './LoginButton.svelte';
+	import AccountButton from './AccountButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';
 	import TwitchLiveIndicator from './TwitchLiveIndicator.svelte';
 </script>
@@ -11,7 +11,7 @@
 		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"><TwitchLiveIndicator /> Twitch</NavbarLink>
 		<NavbarLink href={globals.discordInvite} target="_blank">Discord</NavbarLink>
 		<NavbarLink href="/turnaje">Turnaje</NavbarLink>
-		<LoginButton />
+		<AccountButton />
 	</div>
 </nav>
 
