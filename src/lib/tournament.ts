@@ -1,10 +1,10 @@
 export type Tournament = {
 	id: number,
 	name: string,
-	start?: Date,
-	end?: Date,
-	prize?: string,
-	game_id?: number,
+	start?: string,
+	end?: string,
+	prize: string | null,
+	game_id: number | null,
 }
 
 // this is a dummy function so that TS doesn't complain that this isnt a module
