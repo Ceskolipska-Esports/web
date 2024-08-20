@@ -1,8 +1,13 @@
 <script lang="ts">
 	import globals from '$lib/globals';
+	import { onMount } from 'svelte';
+	import type { PageData } from '../../../routes/$types';
 	import AccountButton from './AccountButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';
 	import TwitchLiveIndicator from './TwitchLiveIndicator.svelte';
+
+	export let data: PageData;
+	const { user } = data;
 </script>
 
 <nav>
@@ -11,7 +16,7 @@
 		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"><TwitchLiveIndicator /> Twitch</NavbarLink>
 		<NavbarLink href={globals.discordInvite} target="_blank">Discord</NavbarLink>
 		<NavbarLink href="/turnaje">Turnaje</NavbarLink>
-		<AccountButton />
+		<AccountButton { user } />
 	</div>
 </nav>
 

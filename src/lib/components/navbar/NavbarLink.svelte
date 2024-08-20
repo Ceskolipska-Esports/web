@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let href: string;
+
 	export let target: '_blank' | '_self' = '_self';
 </script>
 
-<a class="text-xl" {href} {target}><slot /></a>
+<a {href} {target}><slot /></a>
 
 <style lang="scss" scoped>
 	a {
@@ -16,6 +17,7 @@
 		transition: all ease 100ms;
 		text-decoration: underline 0.1rem transparent;
 
+		/* used conditionally */
 		&:hover {
 			color: white;
 			text-decoration: underline 0.1rem var(--accent-color);

@@ -41,7 +41,8 @@
 		"@supabase/supabase-js": "^2.45.1",
 		"dotenv": "^16.4.5",
 		"dotenv-vault": "^1.26.2",
-		"node-fetch-cache": "^4.1.2"
+		"node-fetch-cache": "^4.1.2",
+		"svelte-awesome": "^3.3.1"
 	},
 	"packageManager": "pnpm@9.7.1"
 }

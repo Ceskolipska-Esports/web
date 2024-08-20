@@ -1,10 +1,11 @@
 import { redirect } from '@sveltejs/kit';
+import { env } from '$env/dynamic/public';
 
 export const GET = async ({ locals: { supabase } }) => {
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider: 'discord',
 		options: {
-			redirectTo: `http://localhost:5173/auth/callback`
+			redirectTo: `${env.PUBLIC_BASE_URL}/auth/callback`
 		}
 	});
 	if (error) {
