@@ -1,6 +1,6 @@
 # web
 
-Toto je webová aplikace organizase Českolipská Esports.
+Toto je webová aplikace organizace Českolipská Esports.
 
 ## Vývoj
 

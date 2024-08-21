@@ -21,8 +21,10 @@
 {/if}
 
 <style lang="scss" scoped>
+	@use "/globals";
+
 	#live-circle {
-		color: var(--accent-color);
+		color: globals.$accent-color;
 	}
 
 	#indicator {
@@ -30,7 +32,7 @@
 		align-items: center;
 		gap: 0.15rem;
 
-		border: 2px var(--accent-color) solid;
+		border: 2px globals.$accent-color solid;
 		padding: 0.3rem 0.5rem;
 		border-radius: 1rem;
 		text-decoration: none;

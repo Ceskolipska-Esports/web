@@ -31,18 +31,13 @@
 <Footer />
 
 <style lang="scss">
-	:global(*) {
-		--text-color: rgb(240, 240, 240);
-		--navbar-text-color: rgb(190, 190, 190);
-		--accent-color: #ee0000;
-		--global-padding: 2rem;
-	}
-
+	@use "/globals";
+	
 	:root {
 		font-family: 'Open Sans Variable', sans-serif;
 
 		background-color: black;
-		color: var(--text-color);
-		padding: var(--global-padding);
+		color: globals.$text-color;
+		padding: globals.$padding;
 	}
 </style>

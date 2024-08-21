@@ -4,7 +4,7 @@
 	export let data: Tournament;
 	export let id: number;
 
-	const getFormattedTime = (date?: Date) => {
+	const getFormattedTime = (date?: string) => {
 		if (!date) return '?';
 
 		const d = new Date(date);
@@ -39,13 +39,14 @@
 </div>
 
 <style lang="scss" scoped>
+	@use "/globals";
+		
 	$font-size: 1.5rem;
-	$less-important-text-color: rgb(190, 190, 190);
 
 	#tournament-view-1 {
 		scale: 100%;
 
-		border: 0.2rem solid var(--accent-color);
+		border: 0.2rem solid globals.$accent-color;
 		background-color: rgb(35, 35, 35);
 
 		margin-bottom: 5rem;
@@ -56,19 +57,19 @@
 		scale: 90%;
 
 		width: 100%;
-		color: $less-important-text-color;
+		color: globals.$less-important-text-color;
 
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
 
-		background-color: rgb(25, 25, 25);
+		background-color: globals.$button-background-color;
 		border-radius: 0.8rem;
 		vertical-align: center;
 
 		padding: 2.3rem;
 
-		transition: all 0.2s ease-in-out;
+		transition: globals.$transition;
 	}
 
 	.tournament-view-left {
@@ -77,7 +78,7 @@
 
 	.tournament-view-center {
 		text-align: center;
-		color: white;
+		color: globals.$text-color;
 		font-size: calc($font-size * 1.2);
 	}
 
