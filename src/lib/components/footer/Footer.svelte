@@ -1,18 +1,22 @@
 <script>
-	import FooterLink from './FooterLink.svelte';
+	import Link from '../Link.svelte';
 </script>
 
 <footer>
 	Vytvořeno pomocí Svelte.
-	<FooterLink href="https://github.com/Ceskolipska-Esports/web">Zdrojový kód</FooterLink>
+	<Link href="https://github.com/Ceskolipska-Esports/web">Zdrojový kód</Link>
 </footer>
 
 <style lang="scss" scoped>
+	@use "/globals";
+
 	footer {
 		position: fixed;
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		padding: var(--global-padding);
+		padding: globals.$padding;
+
+		color: globals.$less-important-text-color;
 	}
 </style>

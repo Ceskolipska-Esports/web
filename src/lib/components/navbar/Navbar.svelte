@@ -1,6 +1,5 @@
 <script lang="ts">
 	import globals from '$lib/globals';
-	import { onMount } from 'svelte';
 	import type { PageData } from '../../../routes/$types';
 	import AccountButton from './AccountButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';

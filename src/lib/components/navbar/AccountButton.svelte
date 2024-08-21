@@ -21,6 +21,7 @@
 {/if}
 
 <style lang="scss" scoped>
+	@use "/globals";
 	#container {
 		display: flex;
 		gap: 2rem;
@@ -32,7 +33,7 @@
 		border: 1rem black solid inset;
 		border-radius: 100%;
 		height: $height;
-		transition: all ease-in-out 125ms;
+		transition: globals.$transition;
 
 		&:hover {
 			height: calc($height * 1.1);
