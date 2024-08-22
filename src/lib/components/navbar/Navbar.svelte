@@ -12,10 +12,12 @@
 <nav>
 	<NavbarLink href="/">Českolipská Esports</NavbarLink>
 	<div>
-		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"><TwitchLiveIndicator /> Twitch</NavbarLink>
+		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"
+			><TwitchLiveIndicator /> Twitch</NavbarLink
+		>
 		<NavbarLink href={globals.discordInvite} target="_blank">Discord</NavbarLink>
 		<NavbarLink href="/turnaje">Turnaje</NavbarLink>
-		<AccountButton { user } />
+		<AccountButton {user} />
 	</div>
 </nav>
 

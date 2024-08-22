@@ -1,17 +1,20 @@
-import { env as publicEnv } from "$env/dynamic/public";
-import { env as privateEnv } from "$env/dynamic/private";
-import { streamStatus } from "$lib/stores";
-import { getToken } from "./token";
+import { env as privateEnv } from '$env/dynamic/private';
+import { env as publicEnv } from '$env/dynamic/public';
+import { streamStatus } from '$lib/stores';
+import { getToken } from './token';
 
-export type StreamStatusWrapper = {
-	isLive: false;
-	when: Date; // this specifies how old the info is
-} | {
-	isLive: true;
-	viewerCount: number;
-	streamTitle: string;
-	when: Date;
-} | undefined;
+export type StreamStatusWrapper =
+	| {
+			isLive: false;
+			when: Date; // this specifies how old the info is
+	  }
+	| {
+			isLive: true;
+			viewerCount: number;
+			streamTitle: string;
+			when: Date;
+	  }
+	| undefined;
 
 type StreamsResponse = {
 	data: {
@@ -24,10 +27,10 @@ export const getStreamStatus = async (): Promise<StreamStatusWrapper> => {
 	let status: StreamStatusWrapper;
 	const unsubscribe = streamStatus.subscribe((val) => {
 		if (val && new Date().getTime() - val.when.getTime() >= 20000) {
-			console.log("returning old value")
+			console.log('returning old value');
 			status = val;
 		}
-	})
+	});
 	unsubscribe();
 
 	if (status) {
@@ -38,23 +41,23 @@ export const getStreamStatus = async (): Promise<StreamStatusWrapper> => {
 
 	const response = await fetch(
 		`https://api.twitch.tv/helix/streams?user_login=${publicEnv.PUBLIC_TWITCH_USERNAME}`,
-		{ headers: { Authorization: `Bearer ${token}`, "Client-Id": privateEnv.TWITCH_CLIENT_ID } }
+		{ headers: { Authorization: `Bearer ${token}`, 'Client-Id': privateEnv.TWITCH_CLIENT_ID } }
 	);
 	if (!response.ok) {
-		throw new Error("Failed to fetch the stream status");
+		throw new Error('Failed to fetch the stream status');
 	}
 
 	const json: StreamsResponse = await response.json();
-	const data = json.data[0]
+	const data = json.data[0];
 	if (!data) {
 		return { isLive: false, when: new Date() };
 	}
 
-	status =  {
+	status = {
 		isLive: true,
 		viewerCount: data.viewer_count,
 		streamTitle: data.title,
-		when: new Date(),
+		when: new Date()
 	};
 
 	streamStatus.set(status);

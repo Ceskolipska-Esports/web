@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Českolipská Esports</title>	
+	<title>Českolipská Esports</title>
 
 	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 

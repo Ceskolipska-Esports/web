@@ -1,10 +1,12 @@
-import { env } from "$env/dynamic/private";
-import { accessToken } from "$lib/stores";
+import { env } from '$env/dynamic/private';
+import { accessToken } from '$lib/stores';
 
-export type AccessTokenWrapper = {
-	accessToken: string;
-	expires: Date;
-} | undefined;
+export type AccessTokenWrapper =
+	| {
+			accessToken: string;
+			expires: Date;
+	  }
+	| undefined;
 
 type AccessTokenResponse = {
 	access_token: string;
@@ -27,11 +29,11 @@ export const getToken = async () => {
 
 	const response = await fetch(
 		`https://id.twitch.tv/oauth2/token?client_id=${env.TWITCH_CLIENT_ID}&client_secret=${env.TWITCH_CLIENT_SECRET}&grant_type=client_credentials`,
-		{ method: "POST" },
+		{ method: 'POST' }
 	);
 
 	if (!response.ok) {
-		throw new Error("Failed to fetch the Twitch OAuth token.");
+		throw new Error('Failed to fetch the Twitch OAuth token.');
 	}
 
 	const json: AccessTokenResponse = await response.json();
@@ -40,7 +42,7 @@ export const getToken = async () => {
 
 	t = {
 		accessToken: json.access_token,
-		expires: date,
+		expires: date
 	};
 
 	accessToken.set(t);

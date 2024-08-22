@@ -7,8 +7,8 @@
 
 	onMount(() => {
 		const u = new URL(window.location.href);
-		u ? url = u.toString() : url = "";
-	})
+		u ? (url = u.toString()) : (url = '');
+	});
 </script>
 
 <h1 id="main-title" class="mt-32 mb-16 text-center">

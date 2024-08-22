@@ -6,7 +6,7 @@
 <a {href} class:primary><slot /> <i class="bx bx-chevron-right" /></a>
 
 <style lang="scss">
-	@use "/globals";
+	@use '/globals';
 
 	a {
 		color: white;

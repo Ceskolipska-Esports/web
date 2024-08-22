@@ -1,4 +1,4 @@
-import { supabase } from "$lib/supabaseClient";
+import { supabase } from '$lib/supabaseClient';
 
 export type DiscordUser = {
 	id: number;
@@ -7,17 +7,14 @@ export type DiscordUser = {
 	avatar: string;
 };
 
-export const getDiscordUser = async (
-	userID: string,
-	OAuthToken: string,
-): Promise<DiscordUser> => {
+export const getDiscordUser = async (userID: string, OAuthToken: string): Promise<DiscordUser> => {
 	let response: Response;
 	try {
 		response = await fetch(`https://discord.com/api/users/${userID}`, {
-			headers: { Authorization: `Bearer ${OAuthToken}` },
+			headers: { Authorization: `Bearer ${OAuthToken}` }
 		});
 	} catch {
-		throw new Error("Unable to reach the Discord API.");
+		throw new Error('Unable to reach the Discord API.');
 	}
 
 	return await response.json();
@@ -26,9 +23,9 @@ export const getDiscordUser = async (
 // returns a png image in a Blob
 export const getDiscordUserAvatar = async (
 	user: DiscordUser,
-	OAuthToken: string,
+	OAuthToken: string
 ): Promise<Blob | undefined> => {
-	const url = supabase.storage.from("avatars").getPublicUrl(user.avatar);
+	const url = supabase.storage.from('avatars').getPublicUrl(user.avatar);
 
 	let avatar: Blob;
 
@@ -41,53 +38,50 @@ export const getDiscordUserAvatar = async (
 		avatar = await response.blob();
 		return avatar;
 	} catch {
-		console.warn(
-			"Unable to reach the avatar bucket, fetching from Discord",
-		);
+		console.warn('Unable to reach the avatar bucket, fetching from Discord');
 	}
 
 	try {
 		avatar = await getAvatarFromDiscord(user, OAuthToken);
 	} catch {
-		console.error("Failed to get avatar from Discord");
+		console.error('Failed to get avatar from Discord');
 		return undefined;
 	}
 
-	console.info("Uploading the avatar to our cache");
+	console.info('Uploading the avatar to our cache');
 	try {
 		await uploadAvatarToCache(user.avatar, avatar);
 	} catch {
-		console.warn("Failed to upload avatar to cache");
+		console.warn('Failed to upload avatar to cache');
 	}
 
 	return avatar;
 };
 
-const getAvatarFromDiscord = async (
-	user: DiscordUser,
-	OAuthToken: string,
-): Promise<Blob> => {
+const getAvatarFromDiscord = async (user: DiscordUser, OAuthToken: string): Promise<Blob> => {
 	let response: Response;
 
 	try {
 		response = await fetch(
 			`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=64`,
-			{ headers: { Authorization: `Bearer ${OAuthToken}` } },
+			{ headers: { Authorization: `Bearer ${OAuthToken}` } }
 		);
 	} catch {
-		throw new Error("Unable to reach the Discord API.");
+		throw new Error('Unable to reach the Discord API.');
 	}
 
-	if (!response.ok || response.headers.get("Content-Type") !== "image/png") {
-		throw new Error("Something went wrong when fetching the avatar.");
+	if (!response.ok || response.headers.get('Content-Type') !== 'image/png') {
+		throw new Error('Something went wrong when fetching the avatar.');
 	}
 
 	return await response.blob();
 };
 
 const uploadAvatarToCache = async (hash: string, avatar: Blob) => {
-	const { error } = await supabase.storage.from("avatars").upload(hash, avatar.stream(), { contentType: "image/png" });	
+	const { error } = await supabase.storage
+		.from('avatars')
+		.upload(hash, avatar.stream(), { contentType: 'image/png' });
 	if (error) {
-		throw new Error("Failed to upload avatar to cache.");
+		throw new Error('Failed to upload avatar to cache.');
 	}
 };

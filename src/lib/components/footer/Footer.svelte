@@ -8,7 +8,7 @@
 </footer>
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 
 	footer {
 		position: fixed;

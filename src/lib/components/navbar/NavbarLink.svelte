@@ -7,7 +7,7 @@
 <a {href} {target}><slot /></a>
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 
 	a {
 		display: flex;

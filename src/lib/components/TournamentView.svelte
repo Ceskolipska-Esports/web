@@ -39,8 +39,8 @@
 </div>
 
 <style lang="scss" scoped>
-	@use "/globals";
-		
+	@use '/globals';
+
 	$font-size: 1.5rem;
 
 	#tournament-view-1 {
