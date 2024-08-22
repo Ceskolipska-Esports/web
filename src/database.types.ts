@@ -14,19 +14,19 @@ export type Database = {
           genre: string | null
           id: number
           name: string
-          pegi_rating: string | null
+          pegi_rating: number | null
         }
         Insert: {
           genre?: string | null
           id?: number
           name: string
-          pegi_rating?: string | null
+          pegi_rating?: number | null
         }
         Update: {
           genre?: string | null
           id?: number
           name?: string
-          pegi_rating?: string | null
+          pegi_rating?: number | null
         }
         Relationships: []
       }
