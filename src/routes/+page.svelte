@@ -11,13 +11,6 @@
 	})
 </script>
 
-<svelte:head>
-	<meta property="og:title" content="Českolipská Esports" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={url} />
-	<meta property="og:image" content="/favicon.png" />
-</svelte:head>
-
 <h1 id="main-title" class="mt-32 mb-16 text-center">
 	Chceš se stát <b><u id="champ">šampionem</u></b>?
 </h1>
