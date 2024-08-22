@@ -25,6 +25,7 @@
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@ceskolipska" />
+	<meta name="twitter:description" content="E-sportová organizace Českolipská Esports" />
 	<meta property="og:title" content="Českolipská Esports" />
 	<meta property="og:url" content="https://ceskolipskaesports.cz" />
 	<meta property="og:image" content="/favicon.png" />
