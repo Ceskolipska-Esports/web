@@ -14,7 +14,7 @@
 		background-color: globals.$button-background-color;
 		text-decoration: none;
 
-		border: 0.1rem gray solid;
+		border: 0.1rem globals.$subtle-outline solid;
 		border-radius: 1rem;
 
 		display: flex;
@@ -25,6 +25,7 @@
 
 		&:hover {
 			scale: 105%;
+			border-color: globals.$accent-color;
 			filter: drop-shadow(0 0 0.5rem globals.$accent-color);
 		}
 	}

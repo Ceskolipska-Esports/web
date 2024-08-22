@@ -1,10 +1,12 @@
 import { redirect } from '@sveltejs/kit';
 
 export const GET = async ({ url, locals: { supabase } }) => {
+	const next = url.searchParams.get('next');
+
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider: 'discord',
 		options: {
-			redirectTo: `${url.origin}/auth/callback`
+			redirectTo: `${url.origin}/auth/callback?next=${next}`
 		}
 	});
 	if (error) {

@@ -1,17 +1,12 @@
 <script lang="ts">
 	import HomepageButton from '$lib/components/HomepageButton.svelte';
 	import Link from '$lib/components/Link.svelte';
-	import { onMount } from 'svelte';
-
-	let url: string;
-
-	onMount(() => {
-		const u = new URL(window.location.href);
-		u ? (url = u.toString()) : (url = '');
-	});
+	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
 </script>
 
-<h1 id="main-title" class="mt-32 mb-16 text-center">
+<PageMetadataHelper description="E-sportová organizace Českolipská Esports" />
+
+<h1 id="main-title">
 	Chceš se stát <b><u id="champ">šampionem</u></b>?
 </h1>
 <div id="main-content" class="text-passage">
