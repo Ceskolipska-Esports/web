@@ -23,8 +23,8 @@ pnpm dev # spusťte vývojový server
 Cloudflare Pages sestavuje dvě verze aplikace:
 
 - `preview` - sestavována z větve `dev`, zde můžeme testovat změny před integrací do `master`u.
-  Merge větve `dev`do `master`u vyžaduje úspěšné sestavení na Cloudflare Pages, a v budoucnosti 
-	bude vyžadovat i úspěšné testy (`vitest` i `playwright`, ale nejdřív je někdo musí napsat.)
+  Merge větve `dev`do `master`u vyžaduje úspěšné sestavení na Cloudflare Pages, a v budoucnosti
+  bude vyžadovat i úspěšné testy (`vitest` i `playwright`, ale nejdřív je někdo musí napsat.)
 
 - `production` - sestavována z větve `master`, hlavní sestavení
 

@@ -1,27 +1,31 @@
 <script lang="ts">
-	import type { StreamStatusWrapper } from "$lib/server/twitch/stream";
-	import { onMount } from "svelte";
+	import type { StreamStatusWrapper } from '$lib/server/twitch/stream';
+	import { onMount } from 'svelte';
 
 	let status: StreamStatusWrapper | undefined;
 
 	onMount(async () => {
-		const response = await fetch("/api/stream-status");
+		const response = await fetch('/api/stream-status');
 		if (!response.ok) {
-			console.warn("Failed to get stream status.");
+			console.warn('Failed to get stream status.');
 			status = undefined;
 			return;
 		}
 
 		const json = await response.json();
 		status = json;
-	})
+	});
 </script>
+
 {#if status && status.isLive}
-	<div id="indicator"><i id="live-circle" class="bx bxs-circle" /> LIVE (<i class="bx bxs-user"/> {status.viewerCount})</div>
+	<div id="indicator">
+		<i id="live-circle" class="bx bxs-circle" /> LIVE (<i class="bx bxs-user" />
+		{status.viewerCount})
+	</div>
 {/if}
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 
 	#live-circle {
 		color: globals.$accent-color;

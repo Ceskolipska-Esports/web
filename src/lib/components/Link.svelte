@@ -1,12 +1,12 @@
 <script lang="ts">
 	export let href: string;
-	export let target: "_self" | "_blank" = "_self";
+	export let target: '_self' | '_blank' = '_self';
 </script>
 
 <a {href} {target}><slot /></a>
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 
 	$underline: 0.1rem solid underline;
 

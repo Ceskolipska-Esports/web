@@ -4,13 +4,28 @@
 
 	export let data;
 	const tournaments: Tournament[] | undefined = data.data as Tournament[] | undefined;
-	
+
 	let id = 1;
 
 	const getTournamentViewID = (): number => {
 		return id++;
 	};
 </script>
+
+<svelte:head>
+	<title>Turnaje ● Českolipská Esports</title>
+
+	<meta property="og:title" content="Turnaje ● Českolipská Esports" />
+	<meta property="og:url" content="https://ceskolipskaesports.cz/turnaje" />
+	<meta property="og:description" content="Rozpis turnajů Českolipská Esports" />
+	<meta property="og:image" content="/favicon.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@ceskolipska" />
+	<meta name="twitter:description" content="Rozpis turnajů Českolipská Esports" />
+
+	<meta property="description" content="Rozpis turnajů Českolipská Esports" />
+</svelte:head>
 
 {#if data.error}
 	<h1>Turnaje nelze načíst</h1>

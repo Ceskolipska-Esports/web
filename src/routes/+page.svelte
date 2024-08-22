@@ -1,15 +1,25 @@
-<script>
-	import HomepageButton from "$lib/components/HomepageButton.svelte";
-	import Link from "$lib/components/Link.svelte";
+<script lang="ts">
+	import HomepageButton from '$lib/components/HomepageButton.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import { onMount } from 'svelte';
+
+	let url: string;
+
+	onMount(() => {
+		const u = new URL(window.location.href);
+		u ? (url = u.toString()) : (url = '');
+	});
 </script>
+
 <h1 id="main-title" class="mt-32 mb-16 text-center">
 	Chceš se stát <b><u id="champ">šampionem</u></b>?
 </h1>
 <div id="main-content" class="text-passage">
 	<p>
-		Jsme skupina několika studentů <Link href="https://ceskolipska.cz" target="_blank">Gymnázia Českolipská</Link>, která pořádá turnaje nejen v počítačových
-		hrách. Mezi hry, ve kterých turnaje pořádáme, patří například League of Legends a VALORANT, a
-		seznam her se pořád rozrůstá.
+		Jsme skupina několika studentů <Link href="https://ceskolipska.cz" target="_blank"
+			>Gymnázia Českolipská</Link
+		>, která pořádá turnaje nejen v počítačových hrách. Mezi hry, ve kterých turnaje pořádáme, patří
+		například League of Legends a VALORANT, a seznam her se pořád rozrůstá.
 	</p>
 	<div id="button-container">
 		<HomepageButton href="/turnaje" primary>Zobrazit turnaje</HomepageButton>
@@ -18,7 +28,7 @@
 </div>
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 
 	#main-title {
 		font-size: 5rem;

@@ -21,7 +21,20 @@
 </script>
 
 <svelte:head>
+	<title>Českolipská Esports</title>
+
 	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+	<meta property="og:title" content="Českolipská Esports" />
+	<meta property="og:url" content="https://ceskolipskaesports.cz" />
+	<meta property="og:description" content="E-sportová organizace Českolipská Esports" />
+	<meta property="og:image" content="/favicon.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@ceskolipska" />
+	<meta name="twitter:description" content="E-sportová organizace Českolipská Esports" />
+
+	<meta property="description" content="E-sportová organizace Českolipská Esports" />
 </svelte:head>
 
 <Navbar {data} />
@@ -31,8 +44,8 @@
 <Footer />
 
 <style lang="scss">
-	@use "/globals";
-	
+	@use '/globals';
+
 	:root {
 		font-family: 'Open Sans Variable', sans-serif;
 

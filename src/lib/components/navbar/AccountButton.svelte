@@ -21,7 +21,7 @@
 {/if}
 
 <style lang="scss" scoped>
-	@use "/globals";
+	@use '/globals';
 	#container {
 		display: flex;
 		gap: 2rem;
