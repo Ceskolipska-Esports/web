@@ -1,5 +1,6 @@
 <script lang="ts">
-	import TournamentView from '$lib/components/TournamentView.svelte';
+	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
+import TournamentView from '$lib/components/TournamentView.svelte';
 	import type { Tournament } from '$lib/tournament';
 
 	export let data;
@@ -12,20 +13,7 @@
 	};
 </script>
 
-<svelte:head>
-	<title>Turnaje ● Českolipská Esports</title>
-
-	<meta property="og:title" content="Turnaje ● Českolipská Esports" />
-	<meta property="og:url" content="https://ceskolipskaesports.cz/turnaje" />
-	<meta property="og:description" content="Rozpis turnajů Českolipská Esports" />
-	<meta property="og:image" content="/favicon.png" />
-
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@ceskolipska" />
-	<meta name="twitter:description" content="Rozpis turnajů Českolipská Esports" />
-
-	<meta property="description" content="Rozpis turnajů Českolipská Esports" />
-</svelte:head>
+<PageMetadataHelper title="Turnaje" description="Nadcházející turnaje" />
 
 {#if data.error}
 	<h1>Turnaje nelze načíst</h1>
