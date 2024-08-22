@@ -7,31 +7,6 @@ export type Json =
   | Json[]
 
 export type Database = {
-  graphql_public: {
-    Tables: {
-      [_ in never]: never
-    }
-    Views: {
-      [_ in never]: never
-    }
-    Functions: {
-      graphql: {
-        Args: {
-          operationName?: string
-          query?: string
-          variables?: Json
-          extensions?: Json
-        }
-        Returns: Json
-      }
-    }
-    Enums: {
-      [_ in never]: never
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
   public: {
     Tables: {
       games: {
@@ -39,46 +14,46 @@ export type Database = {
           genre: string | null
           id: number
           name: string
-          pegi_rating: string | null
+          pegi_rating: number | null
         }
         Insert: {
           genre?: string | null
           id?: number
           name: string
-          pegi_rating?: string | null
+          pegi_rating?: number | null
         }
         Update: {
           genre?: string | null
           id?: number
           name?: string
-          pegi_rating?: string | null
+          pegi_rating?: number | null
         }
         Relationships: []
       }
       tournaments: {
         Row: {
-          end: string
+          end: string | null
           game_id: number | null
           id: number
           name: string
           prize: string | null
-          start: string
+          start: string | null
         }
         Insert: {
-          end: string
+          end?: string | null
           game_id?: number | null
           id?: number
           name: string
           prize?: string | null
-          start: string
+          start?: string | null
         }
         Update: {
-          end?: string
+          end?: string | null
           game_id?: number | null
           id?: number
           name?: string
           prize?: string | null
-          start?: string
+          start?: string | null
         }
         Relationships: [
           {
@@ -98,7 +73,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      game_genre: "FPS" | "MOBA" | "STRATEGY"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -187,4 +162,3 @@ export type Enums<
   : PublicEnumNameOrOptions extends keyof PublicSchema["Enums"]
     ? PublicSchema["Enums"][PublicEnumNameOrOptions]
     : never
-
