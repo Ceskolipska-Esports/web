@@ -7,6 +7,16 @@
 
 	const creationDate = new Date(data.user.created_at).toLocaleDateString();
 	const avatar = data.user.user_metadata.avatar_url;
+
+	let participatedInText: string;
+	switch (data.stats.tournaments_participated_in) {
+		case 0: participatedInText = "Turnajů"; break;
+		case 1: participatedInText = "Turnaj"; break;
+		case 2: participatedInText = "Turnaje"; break;
+		case 3: participatedInText = "Turnaje"; break;
+		case 4: participatedInText = "Turnaje"; break;
+		default: participatedInText = "Turnajů"; break;
+	}
 </script>
 
 <PageMetadataHelper title="Váš profil" description="Váš profil na Českolipská Esports" />
@@ -35,7 +45,8 @@
 	<div class="stat-showcase" id="tournaments-participated-in">
 		<i class="bx bx-play-circle" />
 		<b>{data.stats.tournaments_participated_in}</b>
-		<span class="subtext">Turnajů</span>
+		<span class="subtext">
+			{participatedInText}</span>
 	</div>
 </div>
 
