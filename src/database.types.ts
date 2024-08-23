@@ -32,16 +32,16 @@ export type Database = {
       }
       team_members: {
         Row: {
-          team_id: number
-          user_id: number
+          team_id: number | null
+          user_id: string
         }
         Insert: {
-          team_id: number
-          user_id?: number
+          team_id?: number | null
+          user_id: string
         }
         Update: {
-          team_id?: number
-          user_id?: number
+          team_id?: number | null
+          user_id?: string
         }
         Relationships: [
           {
@@ -63,28 +63,28 @@ export type Database = {
       teams: {
         Row: {
           created_at: string
+          game_id: number | null
           id: number
           name: string
-          tournament_id: number | null
         }
         Insert: {
           created_at?: string
+          game_id?: number | null
           id?: number
           name: string
-          tournament_id?: number | null
         }
         Update: {
           created_at?: string
+          game_id?: number | null
           id?: number
           name?: string
-          tournament_id?: number | null
         }
         Relationships: [
           {
-            foreignKeyName: "teams_tournament_id_fkey"
-            columns: ["tournament_id"]
+            foreignKeyName: "teams_game_id_fkey"
+            columns: ["game_id"]
             isOneToOne: false
-            referencedRelation: "tournaments"
+            referencedRelation: "games"
             referencedColumns: ["id"]
           },
         ]
@@ -124,26 +124,31 @@ export type Database = {
           },
         ]
       }
-      users: {
+      user_data: {
         Row: {
-          created_at: string
-          id: number
           tournaments_participated_in: number
           tournaments_won: number
+          user_id: string
         }
         Insert: {
-          created_at?: string
-          id: number
           tournaments_participated_in?: number
           tournaments_won?: number
+          user_id: string
         }
         Update: {
-          created_at?: string
-          id?: number
           tournaments_participated_in?: number
           tournaments_won?: number
+          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "user_data_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {

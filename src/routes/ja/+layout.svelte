@@ -2,6 +2,7 @@
 	import Link from "$lib/components/Link.svelte";
 	import Sidebar from "$lib/components/sidebar/Sidebar.svelte";
 	import { page } from "$app/stores";
+	import type { LayoutData } from "../$types";
 </script>
 
 <div id="main">

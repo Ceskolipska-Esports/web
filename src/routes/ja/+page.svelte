@@ -1,12 +1,12 @@
 <script lang="ts">
 	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import { page } from '$app/stores';
 	import Avatar from '$lib/components/Avatar.svelte';
+	
+	export let data;
 
-	const user = $page.data.session!.user;
-	const creationDate = new Date(user.created_at).toLocaleDateString();
-	const avatar = user.user_metadata.avatar_url;
+	const creationDate = new Date(data.user.created_at).toLocaleDateString();
+	const avatar = data.user.user_metadata.avatar_url;
 </script>
 
 <PageMetadataHelper title="Váš profil" description="Váš profil na Českolipská Esports" />
@@ -19,7 +19,7 @@
 	<hr />
 	<p id="basic-info">
 		<span id="nick">nick</span><br />
-		<span id="username"><i>(@{user.user_metadata.global_name ?? user.user_metadata.full_name})</i></span><br />
+		<span id="username"><i>(@{data.user?.user_metadata.global_name ?? data.user.user_metadata.full_name})</i></span><br />
 		<span id="registration-date">Registrace: {creationDate}</span>
 	</p>
 </div>
@@ -28,13 +28,13 @@
 	<div class="stat-showcase" id="tournament-wins">
 		<i class="bx bx-trophy" />
 		<!-- TODO: add fetching of this -->
-		<b>14</b>
+		<b>{data.stats.tournaments_won}</b>
 		<span class="subtext">Vítězství</span>
 	</div>
 	<hr />
 	<div class="stat-showcase" id="tournaments-participated-in">
 		<i class="bx bx-play-circle" />
-		<b>43</b>
+		<b>{data.stats.tournaments_participated_in}</b>
 		<span class="subtext">Turnajů</span>
 	</div>
 </div>

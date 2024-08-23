@@ -6,7 +6,7 @@ export const GET = async ({ url, locals: { supabase } }) => {
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider: 'discord',
 		options: {
-			redirectTo: `${url.origin}/auth/callback?next=${next}`
+			redirectTo: `${url.origin}/auth/callback${next ? `?callback=${next}` : ''}`
 		}
 	});
 	if (error) {
