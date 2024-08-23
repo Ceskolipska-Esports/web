@@ -3,10 +3,6 @@
 	import Title from '$lib/components/Title.svelte';
 	import { page } from '$app/stores';
 	import Avatar from '$lib/components/Avatar.svelte';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-	const d = data.data;
 
 	const user = $page.data.session!.user;
 	const creationDate = new Date(user.created_at).toLocaleDateString();
