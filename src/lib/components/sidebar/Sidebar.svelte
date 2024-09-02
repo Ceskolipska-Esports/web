@@ -11,9 +11,6 @@
 		align-items: end;
 		align-content: center;
 
-		background-color: globals.$button-background-color;
-		border: 0.1rem solid globals.$subtle-outline;
-		border-radius: 0.7rem;
 		font-size: 1.5rem;
 
 		height: 100%;

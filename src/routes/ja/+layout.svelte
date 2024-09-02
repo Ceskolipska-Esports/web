@@ -2,7 +2,6 @@
 	import Link from "$lib/components/Link.svelte";
 	import Sidebar from "$lib/components/sidebar/Sidebar.svelte";
 	import { page } from "$app/stores";
-	import type { LayoutData } from "../$types";
 </script>
 
 <div id="main">
@@ -11,7 +10,9 @@
 		<Link href="/ja/tymy" active={$page.url.pathname === "/ja/tymy"}>Týmy</Link>
 		<Link href="/ja/propojeni" active={$page.url.pathname === "/ja/propojeni"}>Propojení</Link>
 	</Sidebar>
-	<div id="content"><slot/></div>
+	<main id="content">
+		<slot/>
+	</main>
 </div>
 
 <style lang="scss" scoped>

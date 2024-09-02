@@ -15,6 +15,7 @@ export const GET = async ({ url, locals: { supabase } }) => {
 	}
 
 	if (data.url) {
+		console.log('přesměrování');
 		redirect(303, data.url);
 	}
 
