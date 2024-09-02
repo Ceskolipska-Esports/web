@@ -33,6 +33,8 @@
 		text-align: center;
 		color: globals.$less-important-text-color;
 		place-self: center center;
+
+		font-size: 1.2rem;
 	}
 	
 	#container {
@@ -48,5 +50,7 @@
 		padding: 0 1rem;
 		grid-column: span 3 / span 3;
 		color: globals.$less-important-text-color;
+
+		border-bottom: 0.1rem solid globals.$subtle-outline;
 	}
 </style>
