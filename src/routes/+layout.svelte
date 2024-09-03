@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '@fontsource-variable/open-sans';
 
+	import "../app.css";
+
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import { onMount } from 'svelte';

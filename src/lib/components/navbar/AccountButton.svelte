@@ -10,33 +10,12 @@
 </script>
 
 {#if user}
-	<div id="container">
+	<div class="flex gap-8">
 		<NavbarLink href="/auth/logout">Odhlásit se</NavbarLink>
 		<NavbarLink href="/ja">
-			<img id="avatar" src={user.user_metadata.avatar_url} alt="avatar" />
+			<img class="h-12 rounded-full border-black hover:h-[3.3rem] transition-all ease duration-150" src={user.user_metadata.avatar_url} alt="avatar" />
 		</NavbarLink>
 	</div>
 {:else}
 	<NavbarLink href="/auth/login">Přihlásit se</NavbarLink>
 {/if}
-
-<style lang="scss" scoped>
-	@use '/globals';
-	#container {
-		display: flex;
-		gap: 2rem;
-	}
-
-	#avatar {
-		$height: 3rem;
-
-		border: 1rem black solid inset;
-		border-radius: 100%;
-		height: $height;
-		transition: globals.$transition;
-
-		&:hover {
-			height: calc($height * 1.1);
-		}
-	}
-</style>

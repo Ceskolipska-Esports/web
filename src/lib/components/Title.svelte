@@ -1,7 +1,1 @@
-<h1><slot /></h1>
-
-<style lang="scss" scoped>
-	h1 {
-		text-align: center;
-	}
-</style>
+<h1 class="text-center text-5xl my-5"><slot /></h1>
