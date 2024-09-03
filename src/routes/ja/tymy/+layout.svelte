@@ -3,8 +3,6 @@
 	import Title from "$lib/components/Title.svelte";
 	import Link from "$lib/components/Link.svelte";
 	import { page } from "$app/stores";
-
-	export let data;
 </script>
 
 <PageMetadataHelper description="Vaše týmy na Českolipská Esports" title="Týmy" />
