@@ -19,7 +19,7 @@
 		class="col-span-3 grid grid-cols-3 border-b border-b-outline px-4 text-less-important"
 	>
 		<p style="place-self: center start;">Hra</p>
-		<p style="place-self: center center;">Název týmu</p>
+		<p class="place-self-center">Název týmu</p>
 		<p style="place-self: center end;">Počet členů</p>
 	</div>
 	<slot />

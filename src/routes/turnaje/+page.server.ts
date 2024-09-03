@@ -1,16 +1,16 @@
+import { error } from '@sveltejs/kit';
+
 export const load = async ({ locals: { supabase } }) => {
-	const { data, error } = await supabase
+	const { data: tournaments, error: err } = await supabase
 		.from('tournaments')
 		.select()
-		.gt('start', new Date().toDateString())
+		.gt('start', new Date().toISOString())
 		.order('start');
-	if (error) {
-		return {
-			error: error.message
-		};
+	if (err) {
+		error(500, err?.message);
 	}
 
 	return {
-		data: data
+		tournaments
 	};
 };

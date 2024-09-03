@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { Tournament } from '$lib/tournament';
-
-	export let data: Tournament;
+	export let tournament;
 	export let id: number;
 
 	const getFormattedTime = (date?: string) => {
@@ -11,8 +9,10 @@
 		return `${d.getHours()}:${d.getMinutes()}`;
 	};
 
-	let formattedDate: string = data.start ? new Date(data.start).toLocaleDateString('cs-CZ') : '?';
-	let formattedTime: string = getFormattedTime(data.start);
+	let formattedDate: string = tournament.start
+		? new Date(tournament.start).toLocaleDateString('cs-CZ')
+		: '?';
+	let formattedTime: string = getFormattedTime(tournament.start);
 
 	let dateHovered: boolean = false;
 </script>
@@ -24,15 +24,15 @@
 	on:mouseleave={() => (dateHovered = false)}
 	role="region"
 >
-	<div class="text-left">
+	<div class="text-left" style="place-self: center start;">
 		<div>
 			{dateHovered ? formattedTime : formattedDate}
 		</div>
 	</div>
 	<div class="text-center text-3xl text-text-color">
-		{data.name}
+		{tournament.name}
 	</div>
-	<div class="text-right">
+	<div class="text-right" style="place-self: center end">
 		placeholder
 		<!-- TODO: add code that fetches the game icon from our storage -->
 	</div>
