@@ -18,27 +18,8 @@
 </script>
 
 {#if status && status.isLive}
-	<div id="indicator">
-		<i id="live-circle" class="bx bxs-circle" /> LIVE (<i class="bx bxs-user" />
+	<div class="flex items-center gap-[0.15rem] border-2 border-accent pt-1 px-2 rounded-2xl decoration-transparent">
+		<i class="bx bxs-circle text-accent" /> LIVE (<i class="bx bxs-user" />
 		{status.viewerCount})
 	</div>
 {/if}
-
-<style lang="scss" scoped>
-	@use '/globals';
-
-	#live-circle {
-		color: globals.$accent-color;
-	}
-
-	#indicator {
-		display: flex;
-		align-items: center;
-		gap: 0.15rem;
-
-		border: 2px globals.$accent-color solid;
-		padding: 0.3rem 0.5rem;
-		border-radius: 1rem;
-		text-decoration: none;
-	}
-</style>

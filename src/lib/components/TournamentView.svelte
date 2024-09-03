@@ -19,20 +19,20 @@
 
 <div
 	id={`tournament-view-${id}`}
-	class="tournament-view"
+	class="grid w-max scale-90 grid-cols-3 grid-rows-1 rounded-2xl bg-background-button p-9 align-middle text-2xl text-less-important transition-all duration-150"
 	on:mouseenter={() => (dateHovered = true)}
 	on:mouseleave={() => (dateHovered = false)}
 	role="region"
 >
-	<div class="tournament-view-left">
-		<div class="date-text">
+	<div class="text-left">
+		<div>
 			{dateHovered ? formattedTime : formattedDate}
 		</div>
 	</div>
-	<div class="tournament-view-center">
+	<div class="text-center text-3xl text-text-color">
 		{data.name}
 	</div>
-	<div class="tournament-view-right">
+	<div class="text-right">
 		placeholder
 		<!-- TODO: add code that fetches the game icon from our storage -->
 	</div>
@@ -40,8 +40,6 @@
 
 <style lang="scss" scoped>
 	@use '/globals';
-
-	$font-size: 1.5rem;
 
 	#tournament-view-1 {
 		scale: 100%;
@@ -51,38 +49,5 @@
 
 		margin-bottom: 5rem;
 		width: 100%;
-	}
-
-	.tournament-view {
-		scale: 90%;
-
-		width: 100%;
-		color: globals.$less-important-text-color;
-
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
-
-		background-color: globals.$button-background-color;
-		border-radius: 0.8rem;
-		vertical-align: center;
-
-		padding: 2.3rem;
-
-		transition: globals.$transition;
-	}
-
-	.tournament-view-left {
-		text-align: left;
-	}
-
-	.tournament-view-center {
-		text-align: center;
-		color: globals.$text-color;
-		font-size: calc($font-size * 1.2);
-	}
-
-	.tournament-view-right {
-		text-align: right;
 	}
 </style>

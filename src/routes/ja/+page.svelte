@@ -2,7 +2,7 @@
 	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import Avatar from '$lib/components/Avatar.svelte';
-	
+
 	export let data;
 
 	const creationDate = new Date(data.user.created_at).toLocaleDateString();
@@ -10,12 +10,24 @@
 
 	let participatedInText: string;
 	switch (data.stats.tournaments_participated_in) {
-		case 0: participatedInText = "Turnajů"; break;
-		case 1: participatedInText = "Turnaj"; break;
-		case 2: participatedInText = "Turnaje"; break;
-		case 3: participatedInText = "Turnaje"; break;
-		case 4: participatedInText = "Turnaje"; break;
-		default: participatedInText = "Turnajů"; break;
+		case 0:
+			participatedInText = 'Turnajů';
+			break;
+		case 1:
+			participatedInText = 'Turnaj';
+			break;
+		case 2:
+			participatedInText = 'Turnaje';
+			break;
+		case 3:
+			participatedInText = 'Turnaje';
+			break;
+		case 4:
+			participatedInText = 'Turnaje';
+			break;
+		default:
+			participatedInText = 'Turnajů';
+			break;
 	}
 </script>
 
@@ -23,79 +35,29 @@
 
 <Title>Váš profil</Title>
 
-<div id="profile-picture-and-info">
+<div class="flex content-center gap-12 align-middle">
 	<!-- TODO: this fixed height is probably a bad idea -->
 	<Avatar id="avatar" src={avatar} height="100px" />
-	<hr />
-	<p id="basic-info">
-		<span id="nick">nick</span><br />
-		<span id="username"><i>(@{data.user?.user_metadata.global_name ?? data.user.user_metadata.full_name})</i></span><br />
-		<span id="registration-date">Registrace: {creationDate}</span>
+	<hr class="border border-outline h-[100%]" />
+	<p class="text-center">
+		<span class="text-3xl">nick</span><br />
+		<span class="text-less-important"
+			><i>(@{data.user?.user_metadata.global_name ?? data.user.user_metadata.full_name})</i></span
+		><br />
+		<span>Registrace: {creationDate}</span>
 	</p>
 </div>
 
-<div id="statistics">
-	<div class="stat-showcase" id="tournament-wins">
-		<i class="bx bx-trophy" />
-		<!-- TODO: add fetching of this -->
+<div class="flex">
+	<div class="flex flex-col gap-2 px-8 text-center text-2xl">
+		<i class="bx bx-trophy text-5xl drop-shadow-[3px_3px_0.2rem_theme(colors.accent)]" />
 		<b>{data.stats.tournaments_won}</b>
-		<span class="subtext">Vítězství</span>
+		<span class="text-xl text-less-important">Vítězství</span>
 	</div>
-	<hr />
-	<div class="stat-showcase" id="tournaments-participated-in">
-		<i class="bx bx-play-circle" />
+	<hr class="border border-outline h-[100%]" />
+	<div class="flex flex-col gap-2 px-8 text-center text-2xl">
+		<i class="bx bx-play-circle text-5xl drop-shadow-[3px_3px_0.2rem_theme(colors.accent)]" />
 		<b>{data.stats.tournaments_participated_in}</b>
-		<span class="subtext">
-			{participatedInText}</span>
+		<span class="text-xl text-less-important"> {participatedInText}</span>
 	</div>
 </div>
-
-<style lang="scss">
-	@use "/globals";
-
-	#profile-picture-and-info {
-		display: flex;
-		gap: 3rem;
-
-		align-content: center;
-		vertical-align: middle;
-	}
-
-	#basic-info {
-		text-align: center;
-
-		#nick {
-			font-size: 1.8em;
-		}
-		#username {
-			color: globals.$less-important-text-color;
-		}
-	}
-
-	#statistics {
-		display: flex;
-	}
-
-	.stat-showcase {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		text-align: center;
-		font-size: 1.5rem;
-		padding: 0 2rem;
-
-		.bx {
-			font-size: 3rem;
-			filter: drop-shadow(3px 3px 0.2rem globals.$accent-color);
-		}
-
-		.subtext {
-			color: globals.$less-important-text-color;
-			font-size: 1.3rem;
-		}
-	}
-
-	hr {
-		border-color: globals.$subtle-outline;
-	}
-</style>
