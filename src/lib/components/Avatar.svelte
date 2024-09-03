@@ -4,10 +4,4 @@
 	export let id: string | undefined = undefined;
 </script>
 
-<img {id} {src} {height} alt="avatar" />
-
-<style lang="scss" scoped>
-	img {
-		border-radius: 100%;
-	}
-</style>
+<img class="rounded-full" {id} {src} {height} alt="avatar" />

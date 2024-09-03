@@ -6,55 +6,18 @@
 
 <PageMetadataHelper description="E-sportová organizace Českolipská Esports" />
 
-<h1 id="main-title">
-	Chceš se stát <b><u id="champ">šampionem</u></b>?
+<h1 class="text-8xl my-32 text-center text-less-important">
+	Chceš se stát <b><u class="text-white underline decoration-accent decoration-4 drop-shadow-[0_0_3px_white]">šampionem</u></b>?
 </h1>
-<div id="main-content" class="text-passage">
-	<p>
+<div class="flex flex-col justify-center gap-12">
+	<p class="prose prose-stone text-text-color mx-auto">
 		Jsme skupina několika studentů <Link href="https://ceskolipska.cz" target="_blank"
 			>Gymnázia Českolipská</Link
 		>, která pořádá turnaje nejen v počítačových hrách. Mezi hry, ve kterých turnaje pořádáme, patří
 		například League of Legends a VALORANT, a seznam her se pořád rozrůstá.
 	</p>
-	<div id="button-container">
+	<div class="flex justify-center gap-8">
 		<HomepageButton href="/turnaje" primary>Zobrazit turnaje</HomepageButton>
 		<HomepageButton href="/ja">Přejít na profil</HomepageButton>
 	</div>
 </div>
-
-<style lang="scss" scoped>
-	@use '/globals';
-
-	#main-title {
-		font-size: 5rem;
-		margin-top: 8rem;
-		margin-bottom: 8rem;
-		text-align: center;
-		font-weight: 400;
-		color: globals.$less-important-text-color;
-	}
-
-	#champ {
-		color: white;
-		font-size: 5rem;
-		text-decoration: underline globals.$accent-color 0.4rem;
-		text-shadow: 0px 0px 5px white;
-	}
-
-	#button-container {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-	}
-
-	.text-passage {
-		max-width: 50%;
-		margin: 0 auto;
-	}
-
-	#main-content {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
-</style>

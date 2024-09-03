@@ -9,9 +9,9 @@
 	const { user } = data;
 </script>
 
-<nav>
+<nav class="flex justify-between align-middle content-center p-2 mb-12">
 	<NavbarLink href="/">Českolipská Esports</NavbarLink>
-	<div>
+	<div class="flex gap-12 items-center h-8">
 		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"
 			><TwitchLiveIndicator /> Twitch</NavbarLink
 		>
@@ -20,21 +20,3 @@
 		<AccountButton {user} />
 	</div>
 </nav>
-
-<style scoped lang="scss">
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		align-content: center;
-		padding: 0.5rem;
-		margin-bottom: 3rem;
-
-		div {
-			display: flex;
-			gap: 3rem;
-			align-items: center;
-			height: 2rem;
-		}
-	}
-</style>

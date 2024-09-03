@@ -3,36 +3,14 @@
 	export let primary: boolean = false;
 </script>
 
-<a {href} class:primary><slot /> <i class="bx bx-chevron-right" /></a>
+<a
+	class="flex items-center gap-2 rounded-2xl border-2 border-outline bg-background-button p-2 text-white no-underline transition-all duration-150 hover:scale-105 hover:border-accent hover:drop-shadow-[0_0_0.5rem_theme(colors.accent)]"
+	{href}
+	class:primary><slot /> <i class="bx bx-chevron-right text-2xl" /></a
+>
 
 <style lang="scss">
 	@use '/globals';
-
-	a {
-		color: white;
-		padding: 0.7rem;
-		background-color: globals.$button-background-color;
-		text-decoration: none;
-
-		border: 0.1rem globals.$subtle-outline solid;
-		border-radius: 1rem;
-
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-
-		transition: globals.$transition;
-
-		&:hover {
-			scale: 105%;
-			border-color: globals.$accent-color;
-			filter: drop-shadow(0 0 0.5rem globals.$accent-color);
-		}
-	}
-
-	.bx {
-		font-size: 1.5em;
-	}
 
 	.primary {
 		background-color: globals.$accent-color;
