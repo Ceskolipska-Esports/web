@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '@fontsource-variable/open-sans';
 
-	import "../app.css";
+	import '../app.css';
+	import "boxicons/css/boxicons.min.css";
 
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
@@ -22,12 +23,8 @@
 	});
 </script>
 
-<svelte:head>
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</svelte:head>
-
 <Navbar {data} />
-<main>
+<main class="mt-28">
 	<slot />
 </main>
 <Footer />
@@ -40,6 +37,5 @@
 
 		background-color: black;
 		color: globals.$text-color;
-		padding: globals.$padding;
 	}
 </style>
