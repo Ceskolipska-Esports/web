@@ -9,7 +9,7 @@
 	class:primary><slot /> <i class="bx bx-chevron-right text-2xl" /></a
 >
 
-<style>
+<style lang="postcss">
 	.primary {
 		@apply bg-accent;
 	}

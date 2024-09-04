@@ -29,7 +29,7 @@
 </main>
 <Footer />
 
-<style>
+<style lang="postcss">
 	:root {
 		@apply text-text-color;
 
