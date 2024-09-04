@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
 	export let title: string | undefined = undefined;
 	export let description: string;
-	export let image: string = "/favicon.png";
+	export let image: string = '/favicon.png';
 
-	title = title ? `${title} ● Českolipská Esports` : "Českolipská Esports";
+	title = title ? `${title} ● Českolipská Esports` : 'Českolipská Esports';
 	let url: string | undefined;
 
 	onMount(() => {
 		url = window.location.href;
-	})
+	});
 </script>
 
 <svelte:head>

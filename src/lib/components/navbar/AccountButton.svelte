@@ -11,11 +11,19 @@
 
 {#if user}
 	<div class="flex gap-8">
-		<NavbarLink href="/auth/logout">Odhlásit se</NavbarLink>
+		<NavbarLink href="/auth/logout">
+			<i class="bx bx-log-out text-3xl" />
+		</NavbarLink>
 		<NavbarLink href="/ja">
-			<img class="h-12 rounded-full border-black hover:h-[3.3rem] transition-all ease duration-150" src={user.user_metadata.avatar_url} alt="avatar" />
+			<img
+				class="ease h-12 rounded-full border-black transition-all duration-150 hover:h-[3.3rem]"
+				src={user.user_metadata.avatar_url}
+				alt="avatar"
+			/>
 		</NavbarLink>
 	</div>
 {:else}
-	<NavbarLink href="/auth/login">Přihlásit se</NavbarLink>
+	<NavbarLink href="/auth/login">
+		<i class="bx bx-log-in text-3xl"/>
+	</NavbarLink>
 {/if}

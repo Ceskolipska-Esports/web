@@ -18,7 +18,9 @@
 </script>
 
 {#if status && status.isLive}
-	<div class="flex items-center gap-[0.15rem] border-2 border-accent pt-1 px-2 rounded-2xl decoration-transparent">
+	<div
+		class="flex items-center gap-[0.15rem] rounded-2xl border-2 border-accent px-2 pt-1 decoration-transparent"
+	>
 		<i class="bx bxs-circle text-accent" /> LIVE (<i class="bx bxs-user" />
 		{status.viewerCount})
 	</div>

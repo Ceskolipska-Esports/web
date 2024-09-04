@@ -16,7 +16,7 @@
 
 <Title>Nadcházející turnaje</Title>
 {#if data.tournaments.length === 0}
-	<h3 class="text-center my-20">Žádné nadcházející turnaje</h3>
+	<h3 class="my-20 text-center">Žádné nadcházející turnaje</h3>
 {:else}
 	<div id="tournament-list" class="my-20 flex flex-col items-center p-12 text-2xl">
 		{#each data.tournaments as tournament}

@@ -6,11 +6,15 @@
 
 <PageMetadataHelper description="E-sportová organizace Českolipská Esports" />
 
-<h1 class="text-8xl my-32 text-center text-less-important">
-	Chceš se stát <b><u class="text-white underline decoration-accent decoration-4 drop-shadow-[0_0_3px_white]">šampionem</u></b>?
+<h1 class="my-32 text-center text-8xl text-less-important">
+	Chceš se stát <b
+		><u class="text-white underline decoration-accent decoration-4 drop-shadow-[0_0_3px_white]"
+			>šampionem</u
+		></b
+	>?
 </h1>
 <div class="flex flex-col justify-center gap-12">
-	<p class="prose prose-stone text-text-color mx-auto">
+	<p class="prose prose-stone mx-auto text-text-color">
 		Jsme skupina několika studentů <Link href="https://ceskolipska.cz" target="_blank"
 			>Gymnázia Českolipská</Link
 		>, která pořádá turnaje nejen v počítačových hrách. Mezi hry, ve kterých turnaje pořádáme, patří

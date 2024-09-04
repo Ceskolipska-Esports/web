@@ -38,7 +38,7 @@
 <div class="flex content-center gap-12 align-middle">
 	<!-- TODO: this fixed height is probably a bad idea -->
 	<Avatar id="avatar" src={avatar} height="100px" />
-	<hr class="border border-outline h-[100%]" />
+	<hr class="h-[100%] border border-outline" />
 	<p class="text-center">
 		<span class="text-3xl">nick</span><br />
 		<span class="text-less-important"
@@ -54,7 +54,7 @@
 		<b>{data.stats.tournaments_won}</b>
 		<span class="text-xl text-less-important">Vítězství</span>
 	</div>
-	<hr class="border border-outline h-[100%]" />
+	<hr class="h-[100%] border border-outline" />
 	<div class="flex flex-col gap-2 px-8 text-center text-2xl">
 		<i class="bx bx-play-circle text-5xl drop-shadow-[3px_3px_0.2rem_theme(colors.accent)]" />
 		<b>{data.stats.tournaments_participated_in}</b>

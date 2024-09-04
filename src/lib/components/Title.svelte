@@ -1,1 +1,1 @@
-<h1 class="text-center text-5xl my-5"><slot /></h1>
+<h1 class="my-5 text-center text-5xl"><slot /></h1>

@@ -9,10 +9,8 @@
 	class:primary><slot /> <i class="bx bx-chevron-right text-2xl" /></a
 >
 
-<style lang="scss">
-	@use '/globals';
-
+<style>
 	.primary {
-		background-color: globals.$accent-color;
+		@apply bg-accent;
 	}
 </style>

@@ -32,14 +32,17 @@ export type Database = {
       }
       team_members: {
         Row: {
+          id: number
           team_id: number | null
           user_id: string
         }
         Insert: {
+          id?: number
           team_id?: number | null
           user_id: string
         }
         Update: {
+          id?: number
           team_id?: number | null
           user_id?: string
         }
@@ -54,7 +57,7 @@ export type Database = {
           {
             foreignKeyName: "team_members_user_id_fkey"
             columns: ["user_id"]
-            isOneToOne: true
+            isOneToOne: false
             referencedRelation: "users"
             referencedColumns: ["id"]
           },
@@ -63,26 +66,26 @@ export type Database = {
       teams: {
         Row: {
           created_at: string
-          game_id: number | null
           id: number
           name: string
+          tournament_id: number
         }
         Insert: {
           created_at?: string
-          game_id?: number | null
           id?: number
           name: string
+          tournament_id: number
         }
         Update: {
           created_at?: string
-          game_id?: number | null
           id?: number
           name?: string
+          tournament_id?: number
         }
         Relationships: [
           {
             foreignKeyName: "teams_game_id_fkey"
-            columns: ["game_id"]
+            columns: ["tournament_id"]
             isOneToOne: false
             referencedRelation: "games"
             referencedColumns: ["id"]

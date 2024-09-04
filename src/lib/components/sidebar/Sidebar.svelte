@@ -1,1 +1,5 @@
-<aside class="flex flex-col gap-2 items-end content-center text-2xl h-screen p-4 text-less-important"><slot /></aside>
+<aside
+	class="flex h-screen flex-col content-center items-end gap-2 p-4 text-2xl text-less-important"
+>
+	<slot />
+</aside>

@@ -11,13 +11,9 @@
 	class:active><slot /></a
 >
 
-<style lang="scss" scoped>
-	@use '/globals';
-
-	$underline: 0.1rem solid underline;
-
+<style scoped lang="postcss">
 	.active {
-		color: globals.$text-color;
-		text-decoration: $underline globals.$accent-color;
+		color: theme(colors.text-color);
+		text-decoration: underline 0.1rem solid theme(colors.accent);
 	}
 </style>

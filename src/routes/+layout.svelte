@@ -24,18 +24,16 @@
 </script>
 
 <Navbar {data} />
-<main class="mt-28">
+<main class="mt-28 text-text-color bg-black">
 	<slot />
 </main>
 <Footer />
 
-<style lang="scss">
-	@use '/globals';
-
+<style>
 	:root {
-		font-family: 'Open Sans Variable', sans-serif;
+		@apply text-text-color;
 
+		font-family: 'Open Sans Variable', sans-serif;
 		background-color: black;
-		color: globals.$text-color;
 	}
 </style>

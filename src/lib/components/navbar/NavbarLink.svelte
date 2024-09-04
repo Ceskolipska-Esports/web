@@ -5,7 +5,7 @@
 </script>
 
 <a
-	class="flex items-center gap-4 text-[1.3rem] transition underline decoration-2 duration-100 decoration-transparent hover:decoration-accent hover:text-white text-less-important"
+	class="flex transform-gpu items-center gap-4 text-[1.3rem] text-less-important decoration-transparent transition duration-100 ease-linear hover:scale-110 hover:text-white"
 	{href}
 	{target}><slot /></a
 >

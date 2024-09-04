@@ -19,7 +19,7 @@
 
 <div
 	id={`tournament-view-${id}`}
-	class="grid w-max scale-90 grid-cols-3 grid-rows-1 rounded-2xl bg-background-button p-9 align-middle text-2xl text-less-important transition-all duration-150"
+	class="grid w-max scale-90 grid-cols-3 grid-rows-1 rounded-2xl bg-background-button p-9 align-middle text-2xl text-less-important transition-all duration-150 first:mb-20 first:w-full first:border-2 first:border-accent first:bg-[rgb(35_35_35)]"
 	on:mouseenter={() => (dateHovered = true)}
 	on:mouseleave={() => (dateHovered = false)}
 	role="region"
@@ -37,17 +37,3 @@
 		<!-- TODO: add code that fetches the game icon from our storage -->
 	</div>
 </div>
-
-<style lang="scss" scoped>
-	@use '/globals';
-
-	#tournament-view-1 {
-		scale: 100%;
-
-		border: 0.2rem solid globals.$accent-color;
-		background-color: rgb(35, 35, 35);
-
-		margin-bottom: 5rem;
-		width: 100%;
-	}
-</style>

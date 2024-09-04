@@ -9,14 +9,23 @@
 	const { user } = data;
 </script>
 
-<nav class="flex justify-between align-middle content-center p-2 mb-12">
-	<NavbarLink href="/">Českolipská Esports</NavbarLink>
-	<div class="flex gap-12 items-center h-8">
+<nav
+	class="fixed left-0 top-0 flex w-screen content-center items-center justify-between border-b border-b-outline bg-black p-6 align-middle z-20"
+>
+	<NavbarLink href="/">
+		<i class="bx bx-home text-3xl" />
+	</NavbarLink>
+	<div class="flex h-8 items-center gap-12">
 		<NavbarLink href={`https://twitch.tv/ceskolipskaesports`} target="_blank"
-			><TwitchLiveIndicator /> Twitch</NavbarLink
+			><TwitchLiveIndicator />
+			<i class="bx bxl-twitch text-3xl" />
+		</NavbarLink>
+		<NavbarLink href={globals.discordInvite} target="_blank">
+			<i class="bx bxl-discord-alt text-3xl" />
+		</NavbarLink>
+		<NavbarLink href="/turnaje">
+			<i class="bx bx-trophy text-3xl" /></NavbarLink
 		>
-		<NavbarLink href={globals.discordInvite} target="_blank">Discord</NavbarLink>
-		<NavbarLink href="/turnaje">Turnaje</NavbarLink>
 		<AccountButton {user} />
 	</div>
 </nav>
