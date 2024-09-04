@@ -8,7 +8,7 @@
 <PageMetadataHelper description="Vaše týmy na Českolipská Esports" title="Týmy" />
 
 <Title>Týmy</Title>
-<div class="grid w-max grid-cols-3 gap-4">
+<div class="grid grid-cols-3 gap-4">
 	<div />
 	<div id="controls" class="flex gap-3 place-self-center text-center text-xl text-less-important">
 		<Link href="/ja/tymy" active={$page.url.pathname === '/ja/tymy'}>Moje</Link>
@@ -16,9 +16,9 @@
 	</div>
 	<div
 		id="labels"
-		class="col-span-3 grid grid-cols-3 border-b border-b-outline px-4 text-less-important"
+		class="col-span-3 grid grid-cols-3 border-b border-b-outline mx-4 text-less-important"
 	>
-		<p style="place-self: center start;">Hra</p>
+		<p style="place-self: center start;">Turnaj</p>
 		<p class="place-self-center">Název týmu</p>
 		<p style="place-self: center end;">Počet členů</p>
 	</div>
