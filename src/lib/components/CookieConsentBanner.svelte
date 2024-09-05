@@ -9,7 +9,7 @@
 
 {#if !cookie}
 	<div
-		class="fixed bottom-4 left-1/2 flex h-fit w-fit -translate-x-1/2 flex-col place-items-center gap-2 rounded border border-outline bg-background-button p-4"
+		class="fixed bottom-12 left-1/2 flex h-fit w-fit -translate-x-1/2 flex-col place-items-center gap-2 rounded border border-outline bg-background-button p-4"
 		id="cookie-banner"
 	>
 		<p class="prose text-text-color">
