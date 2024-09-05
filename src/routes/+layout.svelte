@@ -2,12 +2,13 @@
 	import '@fontsource-variable/open-sans';
 
 	import '../app.css';
-	import "boxicons/css/boxicons.min.css";
+	import 'boxicons/css/boxicons.min.css';
 
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
+	import CookieConsentBanner from '$lib/components/CookieConsentBanner.svelte';
 
 	export let data;
 	$: ({ session, supabase } = data);
@@ -24,9 +25,10 @@
 </script>
 
 <Navbar {data} />
-<main class="mt-28 text-text-color bg-black">
+<main class="mt-52 bg-black text-text-color">
 	<slot />
 </main>
+<CookieConsentBanner cookie={data.cookieConsent} />
 <Footer />
 
 <style lang="postcss">

@@ -24,6 +24,6 @@
 	</div>
 {:else}
 	<NavbarLink href="/auth/login">
-		<i class="bx bx-log-in text-3xl"/>
+		<i class="bx bx-log-in text-3xl" />
 	</NavbarLink>
 {/if}
