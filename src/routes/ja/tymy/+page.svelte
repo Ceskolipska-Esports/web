@@ -7,7 +7,11 @@
 
 {#if data.teams}
 	{#each data.teams as team, i}
-		<TeamView tournamentName={data.tournaments[i].name} name={team.name} memberCount={data.members[i] ?? 0} />
+		<TeamView
+			tournamentName={data.tournaments[i].name}
+			name={team.name}
+			memberCount={data.members[i] ?? 0}
+		/>
 	{/each}
 {:else}
 	<h3>Nejste v žádném týmu</h3>

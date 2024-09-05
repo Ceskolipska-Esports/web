@@ -10,7 +10,7 @@
 </script>
 
 <nav
-	class="fixed left-0 top-0 flex w-screen content-center items-center justify-between border-b border-b-outline bg-black p-6 align-middle z-20"
+	class="fixed left-0 top-0 z-20 flex w-screen content-center items-center justify-between border-b border-b-outline bg-black p-6 align-middle"
 >
 	<NavbarLink href="/">
 		<i class="bx bx-home text-3xl" />

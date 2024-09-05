@@ -16,7 +16,7 @@
 	</div>
 	<div
 		id="labels"
-		class="col-span-3 grid grid-cols-3 border-b border-b-outline mx-4 text-less-important"
+		class="col-span-3 mx-4 grid grid-cols-3 border-b border-b-outline text-less-important"
 	>
 		<p style="place-self: center start;">Turnaj</p>
 		<p class="place-self-center">Název týmu</p>
