@@ -4,11 +4,11 @@
 	import '../app.css';
 	import 'boxicons/css/boxicons.min.css';
 
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
-	import Footer from '$lib/components/footer/Footer.svelte';
+	import Navbar from './navbar/Navbar.svelte';
+	import Footer from './Footer.svelte';
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
-	import CookieConsentBanner from '$lib/components/CookieConsentBanner.svelte';
+	import CookieConsentBanner from './CookieConsentBanner.svelte';
 
 	export let data;
 	$: ({ session, supabase } = data);

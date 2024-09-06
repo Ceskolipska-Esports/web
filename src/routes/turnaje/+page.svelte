@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
-	import TournamentView from '$lib/components/TournamentView.svelte';
+	import TournamentView from './TournamentView.svelte';
 	import Title from '$lib/components/Title.svelte';
 
 	export let data;

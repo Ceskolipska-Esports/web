@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TeamView from '$lib/components/teams/TeamView.svelte';
+	import TeamView from './TeamView.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;

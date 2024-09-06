@@ -37,7 +37,7 @@
 
 <div class="flex content-center gap-12 align-middle">
 	<!-- TODO: this fixed height is probably a bad idea -->
-	<Avatar id="avatar" src={avatar} height="100px" />
+	<Avatar id="avatar" src={avatar} width="100px" />
 	<hr class="h-[100%] border border-outline" />
 	<p class="text-center">
 		<span class="text-3xl">nick</span><br />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import globals from '$lib/globals';
-	import type { PageData } from '../../../routes/$types';
+	import type { PageData } from '../$types';
 	import AccountButton from './AccountButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';
 	import TwitchLiveIndicator from './TwitchLiveIndicator.svelte';

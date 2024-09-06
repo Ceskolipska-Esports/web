@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HomepageButton from '$lib/components/HomepageButton.svelte';
+	import HomepageButton from './HomepageButton.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
 </script>

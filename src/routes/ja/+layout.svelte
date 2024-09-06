@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
-	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
+	import Sidebar from '../Sidebar.svelte';
 	import { page } from '$app/stores';
 </script>
 
