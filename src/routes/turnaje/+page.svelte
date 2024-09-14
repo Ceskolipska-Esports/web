@@ -4,12 +4,6 @@
 	import Title from '$lib/components/Title.svelte';
 
 	export let data;
-
-	let id = 1;
-
-	const getTournamentViewID = (): number => {
-		return id++;
-	};
 </script>
 
 <PageMetadataHelper title="Turnaje" description="Nadcházející turnaje" />
@@ -20,7 +14,7 @@
 {:else}
 	<div id="tournament-list" class="my-20 flex flex-col items-center p-12 text-2xl">
 		{#each data.tournaments as tournament}
-			<TournamentView {tournament} id={getTournamentViewID()} />
+			<TournamentView {tournament} />
 		{/each}
 	</div>
 {/if}

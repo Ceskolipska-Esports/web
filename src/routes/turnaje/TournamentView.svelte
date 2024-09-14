@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let tournament;
-	export let id: number;
 
 	const getFormattedTime = (date?: string) => {
 		if (!date) return '?';
@@ -17,8 +16,8 @@
 	let dateHovered: boolean = false;
 </script>
 
+<a href={`/turnaje/${tournament.id}`}>
 <div
-	id={`tournament-view-${id}`}
 	class="grid w-max scale-90 grid-cols-3 grid-rows-1 rounded-2xl bg-background-button p-9 align-middle text-2xl text-less-important transition-all duration-150 first:mb-20 first:w-full first:border-2 first:border-accent first:bg-[rgb(35_35_35)]"
 	on:mouseenter={() => (dateHovered = true)}
 	on:mouseleave={() => (dateHovered = false)}
@@ -37,3 +36,4 @@
 		<!-- TODO: add code that fetches the game icon from our storage -->
 	</div>
 </div>
+</a>

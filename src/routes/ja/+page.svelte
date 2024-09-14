@@ -35,10 +35,8 @@
 
 <Title>Váš profil</Title>
 
-<div class="flex content-center gap-12 align-middle">
-	<!-- TODO: this fixed height is probably a bad idea -->
-	<Avatar id="avatar" src={avatar} width="100px" />
-	<hr class="h-[100%] border border-outline" />
+<div class="grid grid-cols-2 content-center gap-12 align-middle">
+	<Avatar src={avatar} height={100} />
 	<p class="text-center">
 		<span class="text-3xl">nick</span><br />
 		<span class="text-less-important"
@@ -48,13 +46,14 @@
 	</p>
 </div>
 
-<div class="flex">
+<hr class="border w-1/2 border-outline" />
+
+<div class="grid grid-cols-2">
 	<div class="flex flex-col gap-2 px-8 text-center text-2xl">
 		<i class="bx bx-trophy text-5xl drop-shadow-[3px_3px_0.2rem_theme(colors.accent)]" />
 		<b>{data.stats.tournaments_won}</b>
 		<span class="text-xl text-less-important">Vítězství</span>
 	</div>
-	<hr class="h-[100%] border border-outline" />
 	<div class="flex flex-col gap-2 px-8 text-center text-2xl">
 		<i class="bx bx-play-circle text-5xl drop-shadow-[3px_3px_0.2rem_theme(colors.accent)]" />
 		<b>{data.stats.tournaments_participated_in}</b>

@@ -5,7 +5,6 @@
 </script>
 
 <PageMetadataHelper description="E-sportová organizace Českolipská Esports" />
-
 <h1 class="my-32 text-center text-8xl text-less-important">
 	Chceš se stát <b
 		><u class="text-white underline decoration-accent decoration-4 drop-shadow-[0_0_3px_white]"
