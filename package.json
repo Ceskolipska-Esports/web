@@ -18,6 +18,7 @@
 		"@sveltejs/kit": "^2.5.24",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
 		"@tailwindcss/typography": "^0.5.15",
+		"@types/dompurify": "^3.0.5",
 		"@types/eslint": "^9.6.0",
 		"@types/node": "^22.4.2",
 		"autoprefixer": "^10.4.20",
@@ -35,6 +36,7 @@
 		"tailwindcss": "^3.4.10",
 		"typescript": "^5.5.4",
 		"typescript-eslint": "^8.2.0",
+		"typescript-svelte-plugin": "^0.3.41",
 		"vite": "^5.4.2",
 		"vitest": "^2.0.5"
 	},
@@ -46,8 +48,7 @@
 		"boxicons": "^2.1.4",
 		"dotenv": "^16.4.5",
 		"dotenv-vault": "^1.26.2",
-		"node-fetch-cache": "^5.0.2",
-		"svelte-awesome": "^3.3.1"
+		"isomorphic-dompurify": "^2.15.0"
 	},
 	"packageManager": "pnpm@9.9.0"
 }
