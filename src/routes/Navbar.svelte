@@ -7,8 +7,7 @@
 >
 	<a
 		class="flex transform-gpu items-center text-less-important decoration-transparent transition duration-100 ease-linear hover:scale-110 hover:text-white"
-		href="/"
-		target="_blank"><i class="bx bx-home" /></a
+		href="/"><i class="bx bx-home" /></a
 	>
 	<div class="flex h-8 items-center gap-8">
 		<a
