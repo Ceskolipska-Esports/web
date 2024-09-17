@@ -1,24 +1,21 @@
 <script lang="ts">
 	export let href: string;
-	export let target: "_self" | "_blank" = "_self";
+	export let target: '_self' | '_blank' = '_self';
+	export let active: boolean = false;
 </script>
 
-<a {href} {target}><slot /></a>
+<a
+	class="text-inherit underline decoration-outline decoration-2 transition-all duration-150 hover:text-text-color hover:decoration-accent"
+	{href}
+	{target}
+	class:active
+>
+	<slot />
+</a>
 
-<style lang="scss" scoped>
-	@use "/globals";
-
-	$underline: 0.1rem solid underline;
-
-	a {
-		color: inherit;
-		text-decoration: $underline gray;
-		transition: globals.$transition;
-		font-size: inherit;
-
-		&:hover {
-			color: globals.$text-color;
-			text-decoration: $underline globals.$accent-color;
-		}
+<style scoped lang="postcss">
+	.active {
+		color: theme(colors.text-color);
+		text-decoration: underline 0.1rem solid theme(colors.accent);
 	}
 </style>

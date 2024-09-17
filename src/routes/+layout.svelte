@@ -1,43 +1,24 @@
 <script lang="ts">
 	import '@fontsource-variable/open-sans';
 
-	import Navbar from '$lib/components/navbar/Navbar.svelte';
-	import Footer from '$lib/components/footer/Footer.svelte';
-	import { onMount } from 'svelte';
-	import { invalidate } from '$app/navigation';
+	import '../app.css';
+	import 'boxicons/css/boxicons.min.css';
 
-	export let data;
-	$: ({ session, supabase } = data);
-
-	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-			if (newSession?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
-
-		return () => data.subscription.unsubscribe();
-	});
+	import Navbar from './Navbar.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
-<svelte:head>
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</svelte:head>
-
-<Navbar {data} />
-<main>
+<Navbar />
+<main class="mx-12 mt-52 bg-black text-text-color">
 	<slot />
 </main>
 <Footer />
 
-<style lang="scss">
-	@use "/globals";
-	
+<style lang="postcss">
 	:root {
-		font-family: 'Open Sans Variable', sans-serif;
+		@apply text-text-color;
 
+		font-family: 'Open Sans Variable', sans-serif;
 		background-color: black;
-		color: globals.$text-color;
-		padding: globals.$padding;
 	}
 </style>
