@@ -4,12 +4,12 @@
 	import '../app.css';
 	import 'boxicons/css/boxicons.min.css';
 
-	import Navbar from './navbar/Navbar.svelte';
+	import Navbar from './Navbar.svelte';
 	import Footer from './Footer.svelte';
 </script>
 
 <Navbar />
-<main class="mt-52 bg-black text-text-color">
+<main class="mt-52 bg-black text-text-color mx-12">
 	<slot />
 </main>
 <Footer />
