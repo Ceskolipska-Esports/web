@@ -1,5 +1,4 @@
 <script lang="ts">
-	import HomepageButton from './HomepageButton.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import PageMetadataHelper from '$lib/components/PageMetadataHelper.svelte';
 </script>
@@ -19,8 +18,8 @@
 		>, která pořádá turnaje nejen v počítačových hrách. Mezi hry, ve kterých turnaje pořádáme, patří
 		například League of Legends a VALORANT, a seznam her se pořád rozrůstá.
 	</p>
-	<div class="flex justify-center gap-8">
-		<HomepageButton href="/turnaje" primary>Zobrazit turnaje</HomepageButton>
-		<HomepageButton href="/ja">Přejít na profil</HomepageButton>
-	</div>
+	<a
+	class="flex text-2xl items-center gap-2 rounded-2xl border-2 border-outline bg-background-button p-4 text-white no-underline transition-all duration-150 hover:scale-105 hover:border-accent hover:drop-shadow-[0_0_0.5rem_theme(colors.accent)] w-fit mx-auto"
+	href="/turnaje">Discord server <i class="bx bx-chevron-right text-2xl" /></a
+>
 </div>

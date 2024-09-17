@@ -8,7 +8,9 @@
 	class="text-inherit underline decoration-outline decoration-2 transition-all duration-150 hover:text-text-color hover:decoration-accent"
 	{href}
 	{target}
-	class:active><slot /></a
+	class:active>
+	<slot />
+	</a
 >
 
 <style scoped lang="postcss">

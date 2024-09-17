@@ -1,12 +1,7 @@
 <script lang="ts">
 	import globals from '$lib/globals';
-	import type { PageData } from '../$types';
-	import AccountButton from './AccountButton.svelte';
 	import NavbarLink from './NavbarLink.svelte';
 	import TwitchLiveIndicator from './TwitchLiveIndicator.svelte';
-
-	export let data: PageData;
-	const { user } = data;
 </script>
 
 <nav
@@ -23,9 +18,5 @@
 		<NavbarLink href={globals.discordInvite} target="_blank">
 			<i class="bx bxl-discord-alt text-3xl" />
 		</NavbarLink>
-		<NavbarLink href="/turnaje">
-			<i class="bx bx-trophy text-3xl" /></NavbarLink
-		>
-		<AccountButton {user} />
 	</div>
 </nav>
