@@ -6,7 +6,7 @@
 </script>
 
 <PageMetadataHelper description="E-sportová organizace Českolipská Esports" />
-<h1 class="my-32 text-center text-5xl text-less-important md:text-8xl sm:text-7xl">
+<h1 class="my-32 text-center text-5xl text-less-important sm:text-7xl md:text-8xl">
 	Chceš se stát <b
 		><u class="text-white underline decoration-accent decoration-4 drop-shadow-[0_0_3px_white]"
 			>šampionem</u

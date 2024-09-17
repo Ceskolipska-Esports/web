@@ -9,7 +9,7 @@
 </script>
 
 <Navbar />
-<main class="mt-52 bg-black text-text-color mx-12">
+<main class="mx-12 mt-52 bg-black text-text-color">
 	<slot />
 </main>
 <Footer />
