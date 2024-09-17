@@ -3,12 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "node -r dotenv/config ./node_modules/vite/bin/vite.js dev",
-		"build": "node -r dotenv/config ./node_modules/vite/bin/vite.js build",
-		"preview": "node -r dotenv/config ./node_modules/vite/bin/vite.js preview",
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
@@ -18,9 +17,7 @@
 		"@sveltejs/kit": "^2.5.24",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
 		"@tailwindcss/typography": "^0.5.15",
-		"@types/dompurify": "^3.0.5",
 		"@types/eslint": "^9.6.0",
-		"@types/node": "^22.4.2",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.9.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -37,18 +34,12 @@
 		"typescript": "^5.5.4",
 		"typescript-eslint": "^8.2.0",
 		"typescript-svelte-plugin": "^0.3.41",
-		"vite": "^5.4.2",
-		"vitest": "^2.0.5"
+		"vite": "^5.4.2"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/open-sans": "^5.0.30",
-		"@supabase/ssr": "^0.5.0",
-		"@supabase/supabase-js": "^2.45.1",
-		"boxicons": "^2.1.4",
-		"dotenv": "^16.4.5",
-		"dotenv-vault": "^1.26.2",
-		"isomorphic-dompurify": "^2.15.0"
+		"boxicons": "^2.1.4"
 	},
 	"packageManager": "pnpm@9.9.0"
 }
