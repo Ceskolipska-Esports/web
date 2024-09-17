@@ -5,7 +5,7 @@
 	import globals from '$lib/globals';
 </script>
 
-<PageMetadata url="https://ceskolipskaesports.cz" type="website" />
+<PageMetadata url="https://ceskolipskaesports.cz" type="website" description="Esportová organizace Českolipská Esports" />
 
 <h1 class="my-32 text-center text-5xl text-less-important sm:text-7xl md:text-8xl">
 	Chceš se stát <b
