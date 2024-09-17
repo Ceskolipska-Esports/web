@@ -9,16 +9,8 @@
 </script>
 
 <Navbar />
-<main class="mx-12 mt-52 bg-black text-text-color">
+<main class="mx-12 mt-52">
 	<slot />
 </main>
 <Footer />
 
-<style lang="postcss">
-	:root {
-		@apply text-text-color;
-
-		font-family: 'Open Sans Variable', sans-serif;
-		background-color: black;
-	}
-</style>
