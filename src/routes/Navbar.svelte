@@ -27,5 +27,10 @@
 			href={globals.instagram}
 			target="_blank"><i class="bx bxl-instagram" /></a
 		>
+		<a
+			class="flex transform-gpu items-center text-less-important decoration-transparent transition duration-100 ease-linear hover:scale-110 hover:text-white"
+			href={globals.github}
+			target="_blank"><i class="bx bxl-github" /></a
+		>
 	</div>
 </nav>
