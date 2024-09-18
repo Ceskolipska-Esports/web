@@ -12,11 +12,3 @@
 	<slot />
 </main>
 
-<style lang="postcss">
-	:root {
-		@apply text-text-color;
-
-		font-family: 'Open Sans Variable', sans-serif;
-		background-color: black;
-	}
-</style>

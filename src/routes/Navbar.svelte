@@ -5,10 +5,7 @@
 <nav
 	class="fixed left-0 top-0 z-20 flex w-screen content-center items-center justify-between gap-12 border-b border-b-outline bg-black p-6 align-middle text-3xl md:text-4xl"
 >
-	<a
-		class="flex transform-gpu items-center text-less-important decoration-transparent transition duration-100 ease-linear hover:scale-110 hover:text-white"
-		href="/"><i class="bx bx-home" /></a
-	>
+	<img src="icons/favicon.png" width="30px" alt="Českolipská Esports logo" />
 	<div class="flex h-8 items-center gap-8">
 		<a
 			class="flex transform-gpu items-center text-less-important decoration-transparent transition duration-100 ease-linear hover:scale-110 hover:text-[rgb(100_65_164)]"
