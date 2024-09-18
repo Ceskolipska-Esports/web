@@ -3,5 +3,6 @@ export default {
 	twitchUsername: 'ceskolipskaesports',
 	twitch: 'https://twitch.tv/ceskolipskaesports',
 	instagram: 'https://instagram.com/ceskolipska_esports',
-	twitter: 'https://twitter.com/ceskolipska'
+	twitter: 'https://twitter.com/ceskolipska',
+	github: 'https://github.com/Ceskolipska-Esports/web'
 };

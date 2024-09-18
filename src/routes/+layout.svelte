@@ -5,14 +5,12 @@
 	import 'boxicons/css/boxicons.min.css';
 
 	import Navbar from './Navbar.svelte';
-	import Footer from './Footer.svelte';
 </script>
 
 <Navbar />
-<main class="mx-12 mt-52 bg-black text-text-color">
+<main class="mx-12 my-26 md:my-52 bg-black text-text-color">
 	<slot />
 </main>
-<Footer />
 
 <style lang="postcss">
 	:root {
