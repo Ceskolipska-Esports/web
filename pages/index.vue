@@ -17,7 +17,7 @@
 
         <!-- second column -->
         <div
-            class="mx-auto flex flex-col justify-evenly gap-1 text-2xl md:mx-16"
+            class="mx-auto flex flex-col justify-evenly gap-2 text-2xl md:mx-16"
         >
             <HomepageLink
                 href="turnaje"
@@ -40,8 +40,8 @@
                 iconcolor="#9146ff"
                 target="_blank"
             >
-                Sledovat na Twitchi</HomepageLink
-            >
+                Sledovat na Twitchi <TwitchLiveIndicator
+            /></HomepageLink>
         </div>
     </main>
 </template>
