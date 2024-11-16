@@ -1,3 +1,10 @@
+import NodeFetchCache, { MemoryCache } from "node-fetch-cache";
+
+const fetch = NodeFetchCache.create({
+    cache: new MemoryCache({ ttl: 1000 * 60 * 3 }), // 3 minuty
+    shouldCacheResponse: (response) => response.ok,
+});
+
 /* Funkce k přihlášení k Twitchi. Vrací OAuth token.
  *
  * Sleduje tento dokument: `https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow`

@@ -15,6 +15,7 @@
         "@nuxt/icon": "^1.7.5",
         "@nuxtjs/tailwindcss": "^6.12.2",
         "dotenv": "^16.4.5",
+        "node-fetch-cache": "^5.0.2",
         "nuxt": "^3.14.159",
         "vue": "latest",
         "vue-router": "latest"
