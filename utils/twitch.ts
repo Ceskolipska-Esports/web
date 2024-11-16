@@ -42,7 +42,7 @@ export const getLiveStatus = async ({
     username?: string;
 }): Promise<boolean> => {
     type Response = {
-        data: [{}];
+        data: [];
     };
 
     const res = await fetch(

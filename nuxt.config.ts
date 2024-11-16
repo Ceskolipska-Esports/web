@@ -19,5 +19,10 @@ export default defineNuxtConfig({
         "@nuxt/fonts",
         "@nuxt/icon",
         "@nuxt/test-utils/module",
+        "@nuxt/eslint",
     ],
+
+    eslint: {
+        checker: true,
+    },
 });

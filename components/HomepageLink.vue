@@ -25,6 +25,6 @@ const ComputedIcon = h(Icon, {
         :target
         :href
         class="flex w-fit items-center gap-2 text-nowrap py-4 align-middle decoration-[#ee0000] decoration-2 underline-offset-2 hover:underline"
-        ><ComputedIcon /><slot
-    /></NuxtLink>
+        ><ComputedIcon></ComputedIcon><slot></slot
+    ></NuxtLink>
 </template>

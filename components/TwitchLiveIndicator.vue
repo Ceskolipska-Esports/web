@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import { login, getLiveStatus } from "~/utils/twitch";
+const { data: live, error } = useFetch("/api/get-twitch-status", {
+    lazy: true,
+});
 
-const token = await login();
-const status = await getLiveStatus({ token });
+if (error.value !== null) {
+    console.warn("Twitch API je nedostupné");
+}
 </script>
 
 <template>
     <div
+        v-if="live"
         class="flex items-center gap-2 rounded-lg border-2 border-red-800 p-1 align-middle"
-        v-if="status"
     >
         <Icon name="fluent:live-24-regular" style="color: red" />
         <b>LIVE</b>
