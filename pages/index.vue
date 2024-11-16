@@ -1,6 +1,7 @@
 <template>
     <main
-        class="flex h-svh w-screen flex-col justify-evenly md:grid md:grid-cols-2 md:grid-rows-1 md:items-center"
+        class="flex h-svh w-screen flex-col justify-evenly md:grid md:grid-cols-2
+            md:grid-rows-1 md:items-center"
     >
         <!-- first column -->
         <div class="flex flex-col justify-evenly text-center">
@@ -16,9 +17,7 @@
         </div>
 
         <!-- second column -->
-        <div
-            class="mx-auto flex flex-col justify-evenly gap-2 text-2xl md:mx-16"
-        >
+        <div class="mx-auto flex flex-col justify-evenly gap-3 md:mx-16">
             <HomepageLink
                 href="turnaje"
                 icon="material-symbols:trophy"

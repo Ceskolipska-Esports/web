@@ -5,7 +5,6 @@ import { defineNuxtConfig } from "nuxt/config";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
-    devtools: { enabled: true },
 
     app: {
         head: {
@@ -20,6 +19,7 @@ export default defineNuxtConfig({
         "@nuxt/icon",
         "@nuxt/test-utils/module",
         "@nuxt/eslint",
+        "@nuxt/devtools",
     ],
 
     eslint: {
