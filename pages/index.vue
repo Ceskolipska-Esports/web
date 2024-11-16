@@ -28,12 +28,18 @@
             >
             <HomepageLink
                 href="discord"
+                target="_blank"
                 icon="ic:baseline-discord"
                 iconcolor="#5865f2"
             >
                 Přejít na Discord server</HomepageLink
             >
-            <HomepageLink href="twitch" icon="mdi:twitch" iconcolor="#9146ff">
+            <HomepageLink
+                href="twitch"
+                icon="mdi:twitch"
+                iconcolor="#9146ff"
+                target="_blank"
+            >
                 Sledovat na Twitchi</HomepageLink
             >
         </div>
