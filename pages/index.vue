@@ -10,7 +10,7 @@
                     >Českolipská</span
                 ><br />
                 <span
-                    class="text-6xl font-bold drop-shadow-[7px_7px_6px_#ee0000] md:text-8xl"
+                    class="text-6xl font-bold drop-shadow-[7px_7px_6px_#ee0000] md:text-8xl tracking-wide"
                     >Esports</span
                 >
             </p>

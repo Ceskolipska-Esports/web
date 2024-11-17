@@ -29,3 +29,12 @@ automaticky čte `.env`, zatímco `pnpm` ne. Toto chování se mi nelíbí, tud�
 cestu přejít "zpátky" k `pnpm`. Je to trochu abstraktní důvod, ale není to zas takový
 rozdíl. Jediné co se změnilo je to, že místo nativního test runneru teď používáme
 `vitest`, který má stejně lepší integraci s Nuxtem.
+
+## 17. 11. 2024
+
+### 15:21
+
+Integraci s Twitchem jsem dokončil včera večer, jen jsem už neměl sílu na to napsat zápis
+sem do deníku. Dalším krokem je vytvořit tedy systém pro správu turnajů. Jedna z věcí,
+které mě hned teď napadly, je živá tabulka výsledků. Pravděpodobně to bude komplikované,
+ale jsem odhodlaný se tím zabývat.
