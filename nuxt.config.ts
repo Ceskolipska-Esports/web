@@ -6,6 +6,10 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
 
+    nitro: {
+        preset: "cloudflare_pages",
+    },
+
     app: {
         head: {
             title: "Českolipská Esports",
@@ -14,16 +18,17 @@ export default defineNuxtConfig({
     },
 
     modules: [
-      "@nuxtjs/tailwindcss",
-      "@nuxt/fonts",
-      "@nuxt/icon",
-      "@nuxt/test-utils/module",
-      "@nuxt/eslint",
-      "@nuxt/devtools",
-      "@nuxt/image",
+        "@nuxtjs/tailwindcss",
+        "@nuxt/fonts",
+        "@nuxt/icon",
+        "@nuxt/test-utils/module",
+        "@nuxt/eslint",
+        "@nuxt/devtools",
+        "@nuxt/image",
     ],
 
     eslint: {
         checker: true,
     },
 });
+
