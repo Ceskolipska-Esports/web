@@ -14,12 +14,13 @@ export default defineNuxtConfig({
     },
 
     modules: [
-        "@nuxtjs/tailwindcss",
-        "@nuxt/fonts",
-        "@nuxt/icon",
-        "@nuxt/test-utils/module",
-        "@nuxt/eslint",
-        "@nuxt/devtools",
+      "@nuxtjs/tailwindcss",
+      "@nuxt/fonts",
+      "@nuxt/icon",
+      "@nuxt/test-utils/module",
+      "@nuxt/eslint",
+      "@nuxt/devtools",
+      "@nuxt/image",
     ],
 
     eslint: {

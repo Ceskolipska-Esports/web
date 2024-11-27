@@ -4,7 +4,10 @@
             md:grid-rows-1 md:items-center"
     >
         <!-- first column -->
-        <div class="flex flex-col justify-evenly text-center">
+        <div
+            class="flex flex-col justify-evenly text-center items-center align-center gap-4"
+        >
+            <NuxtImg src="favicon.png" sizes="100px md:170px" />
             <p>
                 <span class="text-3xl text-gray-400 md:text-5xl"
                     >Českolipská</span
